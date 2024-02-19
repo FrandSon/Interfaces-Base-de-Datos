@@ -221,7 +221,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmInsertar";
-            this.Text = "Form2";
+            this.Text = "Insertar Producto";
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

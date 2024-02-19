@@ -38,5 +38,12 @@ namespace Interfaces_Base_de_Datos
             frmInsertar insertar = new frmInsertar();
             insertar.ShowDialog();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            this.Visible=false;
+            frmEliminar eliminar = new frmEliminar();
+            eliminar.ShowDialog();
+        }
     }
 }

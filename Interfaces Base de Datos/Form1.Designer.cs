@@ -58,6 +58,8 @@
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar Producto";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+
             // 
             // btnActualizar
             // 
@@ -117,7 +119,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnInsertar);
             this.Name = "frmMenú";
-            this.Text = "Form1";
+            this.Text = "Interfaces";
             this.ResumeLayout(false);
             this.PerformLayout();
 
