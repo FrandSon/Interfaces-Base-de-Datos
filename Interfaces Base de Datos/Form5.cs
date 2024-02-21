@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Interfaces_Base_de_Datos
 {
-    public partial class frmEliminar : Form
+    public partial class frmConsultar : Form
     {
-        public frmEliminar()
+        public frmConsultar()
         {
             InitializeComponent();
         }
@@ -26,9 +26,9 @@ namespace Interfaces_Base_de_Datos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Visible=false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Código",1);
-            eliminarParametro.ShowDialog();
+            this.Visible = false;
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Código", 1);
+            consultarParametro.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,41 +39,36 @@ namespace Interfaces_Base_de_Datos
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Nombre",0);
-            eliminarParametro.ShowDialog();
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Nombre", 0);
+            consultarParametro.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Precio",1);
-            eliminarParametro.ShowDialog();
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Precio", 1);
+            consultarParametro.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Unidad",1);
-            eliminarParametro.ShowDialog();
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Unidad", 1);
+            consultarParametro.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Código Proveedor",1);
-            eliminarParametro.ShowDialog();
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Código Proveedor", 1);
+            consultarParametro.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Código Tipo",1);
-            eliminarParametro.ShowDialog();
-        }
-
-        private void frmEliminar_Load(object sender, EventArgs e)
-        {
-
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Código Tipo", 1);
+            consultarParametro.ShowDialog();
         }
     }
 }

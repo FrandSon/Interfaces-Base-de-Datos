@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Interfaces_Base_de_Datos
 {
-    public partial class frmEliminarConParámetro : Form
+    public partial class frmConsultarConParámetro : Form
     {
         private string parametro;
         string strConn = "Data Source=(Local); database=Facturación; Integrated Security=SSPI";
@@ -19,7 +19,7 @@ namespace Interfaces_Base_de_Datos
         SqlConnection conn = null;
         SqlCommand comm = null;
 
-        public frmEliminarConParámetro(string parametro, int v)
+        public frmConsultarConParámetro(string parametro, int v)
         {
             InitializeComponent();
             this.parametro = parametro;
@@ -28,9 +28,9 @@ namespace Interfaces_Base_de_Datos
 
         private void activarCajasDeTexto(int v)
         {
-            if(v == 0)
+            if (v == 0)
             {
-                txtParámetroParaEliminar.Enabled = true;
+                txtParámetroParaConsultar.Enabled = true;
             }
             else
             {
@@ -42,10 +42,10 @@ namespace Interfaces_Base_de_Datos
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminar eliminar = new frmEliminar();
-            eliminar.ShowDialog();
+            frmConsultar consultar = new frmConsultar();
+            consultar.ShowDialog();
         }
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
             string condicion = "";
             using (conn = new SqlConnection(strConn))
@@ -55,49 +55,49 @@ namespace Interfaces_Base_de_Datos
                 switch (parametro)
                 {
                     case "Código":
-                        strComm = "DELETE FROM Productos WHERE id_producto" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT FROM Productos WHERE id_producto" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
                             mensajeDeVerificación(comm.ExecuteNonQuery());
                         }
                         break;
                     case "Nombre":
-                        strComm = "DELETE FROM Productos WHERE nombre_prod LIKE '%" + txtParámetroParaEliminar.Text + "%'";
+                        strComm = "SELECT FROM Productos WHERE nombre_prod LIKE '%" + txtParámetroParaConsultar.Text + "%'";
                         using (comm = new SqlCommand(strComm, conn))
                         {
                             mensajeDeVerificación(comm.ExecuteNonQuery());
                         }
                         break;
                     case "Precio":
-                        strComm = "DELETE FROM Productos WHERE precio_unit" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT FROM Productos WHERE precio_unit" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
                             mensajeDeVerificación(comm.ExecuteNonQuery());
                         }
                         break;
                     case "Unidad":
-                        strComm = "DELETE FROM Productos WHERE unidad" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT FROM Productos WHERE unidad" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
                             mensajeDeVerificación(comm.ExecuteNonQuery());
                         }
                         break;
                     case "Código Proveedor":
-                        strComm = "DELETE FROM Productos WHERE id_proveedor" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT FROM Productos WHERE id_proveedor" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
                             mensajeDeVerificación(comm.ExecuteNonQuery());
                         }
                         break;
                     case "Código Tipo":
-                        strComm = "DELETE FROM Productos WHERE id_tipo" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT FROM Productos WHERE id_tipo" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
                             mensajeDeVerificación(comm.ExecuteNonQuery());
                         }
                         break;
                 }
-                txtParámetroParaEliminar.Text = "";
+                txtParámetroParaConsultar.Text = "";
             }
         }
 
@@ -136,11 +136,11 @@ namespace Interfaces_Base_de_Datos
         {
             if (v >= 1)
             {
-                MessageBox.Show("Producto eliminado con éxito", "Mensaje", MessageBoxButtons.OK);
+                MessageBox.Show("Producto presentado con éxito", "Mensaje", MessageBoxButtons.OK);
             }
         }
 
-        private void txtParámetroParaEliminar_TextChanged(object sender, EventArgs e)
+        private void txtParámetroParaConsultar_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -152,14 +152,18 @@ namespace Interfaces_Base_de_Datos
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtParámetroParaEliminar.Text = "";
+            txtParámetroParaConsultar.Text = "";
             txtParametroNumero.Text = "";
         }
 
-        private void frmEliminarConParámetro_Load(object sender, EventArgs e)
+        private void frmConsultarConParámetro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
     }
-
 }
