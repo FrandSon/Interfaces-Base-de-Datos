@@ -55,45 +55,51 @@ namespace Interfaces_Base_de_Datos
                 switch (parametro)
                 {
                     case "Código":
-                        strComm = "SELECT FROM Productos WHERE id_producto" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT * FROM Productos WHERE id_producto" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
-                            mensajeDeVerificación(comm.ExecuteNonQuery());
+                            SqlDataReader rdr = comm.ExecuteReader();
+                            mensajeDeVerificación(rdr);
                         }
                         break;
                     case "Nombre":
-                        strComm = "SELECT FROM Productos WHERE nombre_prod LIKE '%" + txtParámetroParaConsultar.Text + "%'";
+                        strComm = "SELECT * FROM Productos WHERE nombre_prod LIKE '%" + txtParámetroParaConsultar.Text + "%'";
                         using (comm = new SqlCommand(strComm, conn))
                         {
-                            mensajeDeVerificación(comm.ExecuteNonQuery());
+                            SqlDataReader rdr = comm.ExecuteReader();
+                            mensajeDeVerificación(rdr);
                         }
                         break;
                     case "Precio":
-                        strComm = "SELECT FROM Productos WHERE precio_unit" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT * FROM Productos WHERE precio_unit" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
-                            mensajeDeVerificación(comm.ExecuteNonQuery());
+                            SqlDataReader rdr = comm.ExecuteReader();
+                            mensajeDeVerificación(rdr);
                         }
                         break;
                     case "Unidad":
-                        strComm = "SELECT FROM Productos WHERE unidad" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT * FROM Productos WHERE unidad" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
-                            mensajeDeVerificación(comm.ExecuteNonQuery());
+                            SqlDataReader rdr = comm.ExecuteReader();
+                            mensajeDeVerificación(rdr);
                         }
                         break;
                     case "Código Proveedor":
-                        strComm = "SELECT FROM Productos WHERE id_proveedor" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT * FROM Productos WHERE id_proveedor" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
-                            mensajeDeVerificación(comm.ExecuteNonQuery());
+                            SqlDataReader rdr = comm.ExecuteReader();
+                            mensajeDeVerificación(rdr);
                         }
                         break;
                     case "Código Tipo":
-                        strComm = "SELECT FROM Productos WHERE id_tipo" + condicion + txtParametroNumero.Text;
+                        strComm = "SELECT * FROM Productos WHERE id_tipo" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
-                            mensajeDeVerificación(comm.ExecuteNonQuery());
+                            SqlDataReader rdr = comm.ExecuteReader();
+                            mensajeDeVerificación(rdr);
                         }
                         break;
                 }
@@ -132,12 +138,10 @@ namespace Interfaces_Base_de_Datos
             return condicion;
         }
 
-        private void mensajeDeVerificación(int v)
+        private void mensajeDeVerificación(SqlDataReader reader)
         {
-            if (v >= 1)
-            {
-                MessageBox.Show("Producto presentado con éxito", "Mensaje", MessageBoxButtons.OK);
-            }
+            frmMostrarProductos mostrar = new frmMostrarProductos(reader);
+            mostrar.ShowDialog();
         }
 
         private void txtParámetroParaConsultar_TextChanged(object sender, EventArgs e)
