@@ -48,7 +48,9 @@ namespace Interfaces_Base_de_Datos
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            
+            this.Visible = false;
+            frmActualizar actualizar = new frmActualizar();
+            actualizar.ShowDialog();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
