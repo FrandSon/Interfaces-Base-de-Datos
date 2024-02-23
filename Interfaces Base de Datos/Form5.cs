@@ -27,7 +27,7 @@ namespace Interfaces_Base_de_Datos
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Código", 1);
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro(Parametros.CODIGO, 1);
             consultarParametro.ShowDialog();
         }
 
@@ -39,35 +39,35 @@ namespace Interfaces_Base_de_Datos
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Nombre", 0);
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro(Parametros.NOMBRE, 0);
             consultarParametro.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Precio", 1);
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro(Parametros.PRECIO, 1);
             consultarParametro.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Unidad", 1);
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro(Parametros.UNIDAD, 1);
             consultarParametro.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Código Proveedor", 1);
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro(Parametros.CODIGO_PROVEEDOR, 1);
             consultarParametro.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro("Código Tipo", 1);
+            frmConsultarConParámetro consultarParametro = new frmConsultarConParámetro(Parametros.CODIGO_TIPO, 1);
             consultarParametro.ShowDialog();
         }
     }

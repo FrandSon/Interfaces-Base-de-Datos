@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label label3;
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -41,12 +42,13 @@
             this.checkBoxNombre = new System.Windows.Forms.CheckBox();
             this.checkBoxPrecio = new System.Windows.Forms.CheckBox();
             this.checkBoxUnidad = new System.Windows.Forms.CheckBox();
+            label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(450, 301);
+            this.btnRegresar.Location = new System.Drawing.Point(444, 343);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(121, 52);
             this.btnRegresar.TabIndex = 40;
@@ -57,7 +59,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(450, 229);
+            this.btnCancelar.Location = new System.Drawing.Point(444, 271);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(121, 52);
             this.btnCancelar.TabIndex = 39;
@@ -68,7 +70,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(450, 157);
+            this.btnIngresar.Location = new System.Drawing.Point(444, 199);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(121, 52);
             this.btnIngresar.TabIndex = 38;
@@ -80,7 +82,7 @@
             // 
             this.txtUnidad.Enabled = false;
             this.txtUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnidad.Location = new System.Drawing.Point(235, 229);
+            this.txtUnidad.Location = new System.Drawing.Point(235, 274);
             this.txtUnidad.Name = "txtUnidad";
             this.txtUnidad.Size = new System.Drawing.Size(170, 28);
             this.txtUnidad.TabIndex = 35;
@@ -89,7 +91,7 @@
             // 
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(235, 181);
+            this.txtPrecio.Location = new System.Drawing.Point(235, 226);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(170, 28);
             this.txtPrecio.TabIndex = 34;
@@ -98,7 +100,7 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(235, 133);
+            this.txtNombre.Location = new System.Drawing.Point(235, 178);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(170, 28);
             this.txtNombre.TabIndex = 33;
@@ -106,7 +108,7 @@
             // txtCódigo
             // 
             this.txtCódigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCódigo.Location = new System.Drawing.Point(235, 85);
+            this.txtCódigo.Location = new System.Drawing.Point(235, 130);
             this.txtCódigo.Name = "txtCódigo";
             this.txtCódigo.Size = new System.Drawing.Size(170, 28);
             this.txtCódigo.TabIndex = 32;
@@ -115,7 +117,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 85);
+            this.label2.Location = new System.Drawing.Point(51, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 24);
             this.label2.TabIndex = 26;
@@ -135,7 +137,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(450, 73);
+            this.btnBuscar.Location = new System.Drawing.Point(444, 115);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(121, 52);
             this.btnBuscar.TabIndex = 41;
@@ -147,7 +149,7 @@
             // 
             this.checkBoxNombre.AutoSize = true;
             this.checkBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxNombre.Location = new System.Drawing.Point(51, 131);
+            this.checkBoxNombre.Location = new System.Drawing.Point(51, 176);
             this.checkBoxNombre.Name = "checkBoxNombre";
             this.checkBoxNombre.Size = new System.Drawing.Size(101, 28);
             this.checkBoxNombre.TabIndex = 42;
@@ -159,7 +161,7 @@
             // 
             this.checkBoxPrecio.AutoSize = true;
             this.checkBoxPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPrecio.Location = new System.Drawing.Point(51, 181);
+            this.checkBoxPrecio.Location = new System.Drawing.Point(51, 226);
             this.checkBoxPrecio.Name = "checkBoxPrecio";
             this.checkBoxPrecio.Size = new System.Drawing.Size(86, 28);
             this.checkBoxPrecio.TabIndex = 43;
@@ -171,7 +173,7 @@
             // 
             this.checkBoxUnidad.AutoSize = true;
             this.checkBoxUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxUnidad.Location = new System.Drawing.Point(51, 231);
+            this.checkBoxUnidad.Location = new System.Drawing.Point(51, 276);
             this.checkBoxUnidad.Name = "checkBoxUnidad";
             this.checkBoxUnidad.Size = new System.Drawing.Size(92, 28);
             this.checkBoxUnidad.TabIndex = 44;
@@ -179,11 +181,22 @@
             this.checkBoxUnidad.UseVisualStyleBackColor = true;
             this.checkBoxUnidad.CheckedChanged += new System.EventHandler(this.checkBoxUnidad_CheckedChanged);
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(32, 73);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(533, 20);
+            label3.TabIndex = 47;
+            label3.Text = "Ingrese lo el código del productos para buscar y actualizar el producto";
+            // 
             // frmActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 413);
+            this.Controls.Add(label3);
             this.Controls.Add(this.checkBoxUnidad);
             this.Controls.Add(this.checkBoxPrecio);
             this.Controls.Add(this.checkBoxNombre);
