@@ -13,13 +13,13 @@ namespace Interfaces_Base_de_Datos
 {
     public partial class frmConsultarConParámetro : Form
     {
-        private string parametro;
-        string strConn = "Data Source=(Local); database=Facturación; Integrated Security=SSPI";
+        private Parametros parametro;
+        string strConn = BaseDeDatos.getConexion();
         string strComm = null;
         SqlConnection conn = null;
         SqlCommand comm = null;
 
-        public frmConsultarConParámetro(string parametro, int v)
+        public frmConsultarConParámetro(Parametros parametro, int v)
         {
             InitializeComponent();
             this.parametro = parametro;
@@ -54,7 +54,7 @@ namespace Interfaces_Base_de_Datos
                 conn.Open();
                 switch (parametro)
                 {
-                    case "Código":
+                    case Parametros.CODIGO:
                         strComm = "SELECT * FROM Productos WHERE id_producto" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
@@ -62,7 +62,7 @@ namespace Interfaces_Base_de_Datos
                             mensajeDeVerificación(rdr);
                         }
                         break;
-                    case "Nombre":
+                    case Parametros.NOMBRE:
                         strComm = "SELECT * FROM Productos WHERE nombre_prod LIKE '%" + txtParámetroParaConsultar.Text + "%'";
                         using (comm = new SqlCommand(strComm, conn))
                         {
@@ -70,7 +70,7 @@ namespace Interfaces_Base_de_Datos
                             mensajeDeVerificación(rdr);
                         }
                         break;
-                    case "Precio":
+                    case Parametros.PRECIO:
                         strComm = "SELECT * FROM Productos WHERE precio_unit" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
@@ -78,7 +78,7 @@ namespace Interfaces_Base_de_Datos
                             mensajeDeVerificación(rdr);
                         }
                         break;
-                    case "Unidad":
+                    case Parametros.UNIDAD:
                         strComm = "SELECT * FROM Productos WHERE unidad" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
@@ -86,7 +86,7 @@ namespace Interfaces_Base_de_Datos
                             mensajeDeVerificación(rdr);
                         }
                         break;
-                    case "Código Proveedor":
+                    case Parametros.CODIGO_PROVEEDOR:
                         strComm = "SELECT * FROM Productos WHERE id_proveedor" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {
@@ -94,7 +94,7 @@ namespace Interfaces_Base_de_Datos
                             mensajeDeVerificación(rdr);
                         }
                         break;
-                    case "Código Tipo":
+                    case Parametros.CODIGO_TIPO:
                         strComm = "SELECT * FROM Productos WHERE id_tipo" + condicion + txtParametroNumero.Text;
                         using (comm = new SqlCommand(strComm, conn))
                         {

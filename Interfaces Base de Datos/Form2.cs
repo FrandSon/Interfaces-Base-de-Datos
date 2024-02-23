@@ -84,7 +84,7 @@ namespace Interfaces_Base_de_Datos
             unidad = txtUnidad.Text;
             idTipo = txtCódigoTipo.Text;
             idProveedor = txtCódigoProveedor.Text;
-            strConn = "Data Source=(Local); database=Facturación; Integrated Security=SSPI";
+            strConn = BaseDeDatos.getConexion();
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();

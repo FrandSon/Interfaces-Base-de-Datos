@@ -27,7 +27,7 @@ namespace Interfaces_Base_de_Datos
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible=false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Código",1);
+            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro(Parametros.CODIGO,1);
             eliminarParametro.ShowDialog();
         }
 
@@ -39,35 +39,35 @@ namespace Interfaces_Base_de_Datos
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Nombre",0);
+            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro(Parametros.NOMBRE,0);
             eliminarParametro.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Precio",1);
+            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro(Parametros.PRECIO,1);
             eliminarParametro.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Unidad",1);
+            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro(Parametros.UNIDAD,1);
             eliminarParametro.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Código Proveedor",1);
+            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro(Parametros.CODIGO_PROVEEDOR,1);
             eliminarParametro.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro("Código Tipo",1);
+            frmEliminarConParámetro eliminarParametro = new frmEliminarConParámetro(Parametros.CODIGO_TIPO,1);
             eliminarParametro.ShowDialog();
         }
 

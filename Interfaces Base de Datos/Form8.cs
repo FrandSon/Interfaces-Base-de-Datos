@@ -14,7 +14,7 @@ namespace Interfaces_Base_de_Datos
     public partial class frmActualizar : Form
     {
         private string parametro;
-        string strConn = "Data Source=(Local); database=Facturación; Integrated Security=SSPI";
+        string strConn = BaseDeDatos.getConexion();
         string strComm = null;
         SqlConnection conn = null;
         SqlCommand comm = null;
